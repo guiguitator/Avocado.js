@@ -32,3 +32,13 @@ A simple and lightweight JavaScript framework to help you create a web applicati
 // Exemple :
 Avocado.getById.style({backgroundColor:'#323232', color:'white'})
 ```
+
+### Animation
+
+**.fadeIn(***duration***)** = Gradually increases the opacity of an element.
+
+**.fadeOut(***duration***)** = Gradually decreases the opacity of an element.
+
+**.rollingNumber(***start, end, duration***)** = I don't know how to explain that but it's cool...
+
+**.typeWriter(***text, speed***)** = Animation that writes a text as it goes.
