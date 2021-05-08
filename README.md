@@ -10,9 +10,9 @@ A simple and lightweight JavaScript framework to help you create a web applicati
 
 **.getByClass(***class***)** = Get an element by its class name.
 
-**.getByTag(***class***)** = Get an element by its tag.
+**.getByTag(***tag***)** = Get an element by its tag.
 
-**.getByName(***class***)** = Get an element by its name.
+**.getByName(***name***)** = Get an element by its name.
 
 ### ⚙️ Debug
 
@@ -53,3 +53,8 @@ Avocado.getById.style({backgroundColor:'#323232', color:'white'})
 
 **.checked(***bool***)** = Check or uncheck input.
 
+### 🎈 Events
+
+**.on(***action, callback***)** = Add event listener.
+
+**.hover(***callbackIn, callbackOut***)** = Add event `onover` listener.
