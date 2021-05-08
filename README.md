@@ -58,3 +58,21 @@ Avocado.getById.style({backgroundColor:'#323232', color:'white'})
 **.on(***action, callback***)** = Add event listener.
 
 **.hover(***callbackIn, callbackOut***)** = Add event `onover` listener.
+
+### 📄 Document
+
+**.addClass(***className***)** = Add class to an element.
+
+**.removeClass(***className***)** = Remove class to an element.
+
+**.innerHTML(***html***)** = Insert HTML in an element.
+
+**.innerText(***text***)** = Insert text in an element.
+
+### 🌆 Window
+
+**.screenHeight()** = Return the current available screen height.
+
+**.screenWidth()** = Return the current available screen width.
+
+**.title(***title***)** = Change the title of the page.
