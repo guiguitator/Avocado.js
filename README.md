@@ -4,7 +4,7 @@ A simple and lightweight JavaScript framework to help you create a web applicati
 
 ## 💻 Documentation
 
-### Selector
+### 🔗 Selector
 
 **.getById(***id***)** = Get an element by its ID.
 
@@ -14,7 +14,7 @@ A simple and lightweight JavaScript framework to help you create a web applicati
 
 **.getByName(***class***)** = Get an element by its name.
 
-### Debug
+### ⚙️ Debug
 
 **.consoleInfo(***text***)** = An alternative to the classic ***console.log()*** function.
 
@@ -24,7 +24,7 @@ A simple and lightweight JavaScript framework to help you create a web applicati
 
 **.consoleWarn(***text***)** = An alternative to the classic ***console.log()*** function.
 
-### Style
+### 🎨 Style
 
 **.style(***objStyle***)** = Add CSS style to an element.
 
@@ -33,7 +33,7 @@ A simple and lightweight JavaScript framework to help you create a web applicati
 Avocado.getById.style({backgroundColor:'#323232', color:'white'})
 ```
 
-### Animation
+### 🎉 Animation
 
 **.fadeIn(***duration***)** = Gradually increases the opacity of an element.
 
@@ -42,3 +42,10 @@ Avocado.getById.style({backgroundColor:'#323232', color:'white'})
 **.rollingNumber(***start, end, duration***)** = I don't know how to explain that but it's cool...
 
 **.typeWriter(***text, speed***)** = Animation that writes a text as it goes.
+
+### 📥 Input
+
+**.value()** = Get the value of an input.
+
+**.checked(***bool***)** = Check or uncheck input.
+
