@@ -33,6 +33,10 @@ A simple and lightweight JavaScript framework to help you create a web applicati
 Avocado.getById.style({backgroundColor:'#323232', color:'white'})
 ```
 
+**.boxShadow(***shadow***)** = Add the CSS `box-shadow` property to an element.
+
+**.display(***type***)** = Add the CSS `display` property to an element.
+
 ### 🎉 Animation
 
 **.fadeIn(***duration***)** = Gradually increases the opacity of an element.
