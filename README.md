@@ -83,6 +83,8 @@ Avocado.getById.style({backgroundColor:'#323232', color:'white'})
 
 **.randomBool(***probability***)** = Return random boolean.
 
+**.randomColor()** = Return random hex color.
+
 **.randomFloat(***min, max***)** = Return random float.
 
 **.randomInt(***min, max***)** = Return random integer.
