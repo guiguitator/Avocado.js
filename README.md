@@ -69,6 +69,8 @@ Avocado.getById.style({backgroundColor:'#323232', color:'white'})
 
 **.innerText(***text***)** = Insert text in an element.
 
+**.src(***source***)** = Change source of an element.
+
 ### 🌆 Window
 
 **.screenHeight()** = Return the current available screen height.
@@ -76,3 +78,11 @@ Avocado.getById.style({backgroundColor:'#323232', color:'white'})
 **.screenWidth()** = Return the current available screen width.
 
 **.title(***title***)** = Change the title of the page.
+
+### 🎲 Random 
+
+**.randomBool(***probability***)** = Return random boolean.
+
+**.randomFloat(***min, max***)** = Return random float.
+
+**.randomInt(***min, max***)** = Return random integer.
