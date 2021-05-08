@@ -23,3 +23,12 @@ A simple and lightweight JavaScript framework to help you create a web applicati
 **.consoleSucess(***text***)** = An alternative to the classic ***console.log()*** function.
 
 **.consoleWarn(***text***)** = An alternative to the classic ***console.log()*** function.
+
+### Style
+
+**.style(***objStyle***)** = Add CSS style to an element.
+
+```js
+// Exemple :
+Avocado.getById.style({backgroundColor:'#323232', color:'white'})
+```
