@@ -2,6 +2,19 @@
 
 A simple and lightweight JavaScript framework to help you create a web application.
 
+## 📌 Features
+
+- Lightweight
+- Well documented 
+- Often updated
+- Simple of use
+
+```js
+Avocado.getById('core').typeWriter('Welcome !', 250);
+// or :
+$$.getById('core').typeWriter('Welcome !', 250);
+```
+
 ## 💻 Documentation
 
 ### 🔗 Selector
