@@ -81,9 +81,9 @@ Avocado.getById('core').style({backgroundColor:'#323232', color:'white'})
 
 **.removeId(***className***)** = Remove ID to an element.
 
-**.innerHTML(***html***)** = Insert HTML in an element.
+**.insertHTML(***html***)** = Insert HTML in an element.
 
-**.innerText(***text***)** = Insert text in an element.
+**.insertText(***text***)** = Insert text in an element.
 
 **.src(***source***)** = Change source of an element.
 
