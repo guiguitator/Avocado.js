@@ -97,6 +97,8 @@ Avocado.getById('core').style({backgroundColor:'#323232', color:'white'})
 
 **.title(***title***)** = Change the title of the page.
 
+**fullscreen(***bool***)** = Change the window fullscreen mode.
+
 ### 🎲 Random 
 
 **.randomBool(***probability***)** = Return random boolean.
