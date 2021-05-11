@@ -62,6 +62,13 @@ var Avocado = {
 		return this;
 	},
 
+	addId: function(id) {
+		for(var i = 0; i<this.elements.length; i++) {
+			this.elements[i].id = id;
+		}
+		return this;
+	},
+
 	boxShadow: function(shadow) {
 		for(var i = 0; i<this.elements.length; i++) {
 			if (shadow == 'light') {this.elements[i].style.boxShadow='0 1px 2px 0 rgba(0, 0, 0, 0.05)';}
@@ -74,7 +81,15 @@ var Avocado = {
 	checked: function(bool) {
 		for(var i=0;i<this.elements.length;i++) {
 			if (this.elements[i].nodeName.toLowerCase() === 'input' && (this.elements[i].getAttribute('type') == 'checkbox' || this.elements[i].getAttribute('type') == 'radio')){
-				this.elements[i].checked = bool;
+				if (bool == undefined) {
+					if (this.elements[i].checked == true) {
+						this.elements[i].checked = false;
+					} else if (this.elements[i].checked == false) {
+						this.elements[i].checked = true;
+					}
+				} else {
+					this.elements[i].checked = bool;
+				}
 		}
 	}
 		return this;
@@ -100,6 +115,7 @@ var Avocado = {
 		return this;
 	},
 
+	// ⚠️ PROTOTYPE
 	delay: function(ms) {
 		for(var i = 0; i<this.elements.length; i++) {
 			setTimeout(function () {
@@ -211,6 +227,32 @@ var Avocado = {
 		return this;
 	},
 
+	fullscreen: function(bool) {
+		for(var i = 0; i<this.elements.length; i++) {
+			element = this.elements[i];
+			if (bool == true) {
+				if (element.requestFullscreen) {
+					element.requestFullscreen();
+				} else if (element.webkitRequestFullscreen) {
+					element.webkitRequestFullscreen();
+				} else if (element.msRequestFullscreen) {
+					element.msRequestFullscreen();
+				}
+			} else if (bool == false) {
+				if (document.exitFullscreen) {
+					document.exitFullscreen();
+				} else if (document.webkitExitFullscreen) {
+					document.webkitExitFullscreen();
+				} else if (document.mozCancelFullScreen) {
+					document.mozCancelFullScreen();
+				} else if (document.msExitFullscreen) {
+					document.msExitFullscreen();
+				}
+			}
+		}
+		return this;
+	},
+
 	hover: function(callbackIn, callbackOut){
 		if (this.elements[0].addEventListener) {
 			for(var i = 0; i<this.elements.length; i++) {
@@ -226,16 +268,33 @@ var Avocado = {
 		return this;
 	},
 
-	innerHTML: function(html) {
+	insertHTML: function(html) {
 		for(var i = 0; i<this.elements.length; i++) {
 			this.elements[i].innerHTML=html;
 		}
 		return this;
 	},
 
-	innerText: function(text) {
+	insertText: function(text) {
 		for(var i = 0; i<this.elements.length; i++) {
 			this.elements[i].textContent=text;
+		}
+		return this;
+	},
+
+	lenght: function() {
+		for(var i = 0; i<this.elements.length; i++) {
+			return this.elements.length;
+		}
+		return this;
+	},
+
+	// ⚠️ PROTOTYPE
+	openWindow: function(link, title, width, height) {
+		if (link == 'none') {
+			window.open('', title, 'width='+width+', height='+height);
+		} else {
+			window.open(link, title, 'width='+width+', height='+height);
 		}
 		return this;
 	},
@@ -250,6 +309,32 @@ var Avocado = {
 				this.elements[i].attachEvent('on'+action, callback);
 			}
 		}
+		return this;
+	},
+
+	passwordGenerator: function(length, strength) {
+		if (strength == 'hard') {
+			var size = 12;
+			if (length != undefined) {
+				size = length;
+			}
+			var charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+~`|}{[]:;?><,./-=";
+			var password = "";
+			for (var i = 0, n = charset.length; i < size; ++i) {
+				password += charset.charAt(Math.floor(Math.random() * n));
+			}
+		} else if (strength == undefined || 'normal') {
+			var size = 8;
+			if (length != undefined) {
+				size = length;
+			}
+			var charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+			var password = "";
+			for (var i = 0, n = charset.length; i < size; ++i) {
+				password += charset.charAt(Math.floor(Math.random() * n));
+			}
+		}
+		return password;
 		return this;
 	},
 
@@ -286,9 +371,39 @@ var Avocado = {
 		return this;
 	},
 
+	randomGradient: function(type, deg) {
+		var letters = '0123456789ABCDEF';
+		var color_primary = '#';
+		var color_secondary = '#'
+		var gradient_type = 'linear-gradient';
+		var gradient_deg = 54+'deg';
+		if (deg != undefined) {
+			gradient_deg = deg+'deg';
+		} if (type == 'linear') {
+			gradient_type = 'linear-gradient';
+		} else if (type == 'radial') {
+			gradient_type = 'radial-gradient';
+			gradient_deg = 'circle';
+		}
+		for (var i = 0; i < 6; i++) {
+			color_primary += letters[Math.floor(Math.random() * 16)];
+			color_secondary += letters[Math.floor(Math.random() * 16)];
+		}
+		var gradient = gradient_type+'('+gradient_deg+', '+color_primary+' 0%, '+color_secondary+' 100%) fixed';
+		return gradient;
+		return this;
+	},
+
 	removeClass: function(name) {
 		for(var i = 0; i<this.elements.length; i++) {
 			this.elements[i].classList.remove(name);
+		}
+		return this;
+	},
+
+	removeId: function() {
+		for(var i = 0; i<this.elements.length; i++) {
+			this.elements[i].removeAttribute('id');
 		}
 		return this;
 	},
@@ -322,12 +437,34 @@ var Avocado = {
 
 	src: function(source) {
 		for(var i = 0; i<this.elements.length; i++) {
-			return this.elements[i].src=source;
+			if (source == undefined) {
+				return this.elements[i].src;
+			} else {
+				this.elements[i].src=source;
+			}
 		}
 		return this;
 	},
 
-	style: function(objStyle){
+	showPassword: function(bool) {
+		for(var i = 0; i<this.elements.length; i++) {
+			if (bool == true) {
+				this.elements[i].type = "text";
+			} else if (bool == false) {
+				this.elements[i].type = "password";
+			}
+			else if (bool == undefined) {
+				if (this.elements[i].type == "password") {
+					this.elements[i].type = "text";
+				} else if (this.elements[i].type == "text") {
+					this.elements[i].type = "password";
+				}
+			}
+		}
+		return this;
+	},
+
+	style: function(objStyle) {
 		for(var i = 0; i < this.elements.length;i++) {
 			for(var k in objStyle) {
 				this.elements[i].style[k] = objStyle[k];
@@ -363,9 +500,13 @@ var Avocado = {
 		return this;
 	},
 
-	value: function() {
+	value: function(value) {
 		for(var i = 0; i<this.elements.length; i++) {
-			return this.elements[i].value;
+			if (value == undefined) {
+				return this.elements[i].value;
+			} else {
+				this.elements[i].value=value;
+			}
 		}
 		return this;
 	},
