@@ -87,6 +87,8 @@ Avocado.getById('core').style({backgroundColor:'#323232', color:'white'})
 
 **.src(***source***)** = Change source of an element.
 
+**.lenght()** = Return lenght of an element.
+
 ### 🌆 Window
 
 **.screenHeight()** = Return the current available screen height.
@@ -101,7 +103,7 @@ Avocado.getById('core').style({backgroundColor:'#323232', color:'white'})
 
 **.randomColor()** = Return random hex color.
 
-**.randomGradient(type, deg)** = Return random gradient.
+**.randomGradient(***type***, ***deg***)** = Return random gradient.
 ```js
 // Exemple :
 Avocado.getByTag('body').style({background: $$.randomGradient('linear', 54)})
