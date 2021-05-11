@@ -40,10 +40,9 @@ $$.getById('core').typeWriter('Welcome !', 250);
 ### 🎨 Style
 
 **.style(***objStyle***)** = Add CSS style to an element.
-
 ```js
 // Exemple :
-Avocado.getById.style({backgroundColor:'#323232', color:'white'})
+Avocado.getById('core').style({backgroundColor:'#323232', color:'white'})
 ```
 
 **.boxShadow(***shadow***)** = Add the CSS `box-shadow` property to an element.
@@ -76,7 +75,11 @@ Avocado.getById.style({backgroundColor:'#323232', color:'white'})
 
 **.addClass(***className***)** = Add class to an element.
 
+**.addId(***idName***)** = Add unique ID to an element.
+
 **.removeClass(***className***)** = Remove class to an element.
+
+**.removeId(***className***)** = Remove ID to an element.
 
 **.innerHTML(***html***)** = Insert HTML in an element.
 
@@ -97,6 +100,12 @@ Avocado.getById.style({backgroundColor:'#323232', color:'white'})
 **.randomBool(***probability***)** = Return random boolean.
 
 **.randomColor()** = Return random hex color.
+
+**.randomGradient(type, deg)** = Return random gradient.
+```js
+// Exemple :
+Avocado.getByTag('body').style({background: $$.randomGradient('linear', 54)})
+```
 
 **.randomFloat(***min, max***)** = Return random float.
 
