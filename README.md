@@ -49,6 +49,8 @@ Avocado.getById('core').style({backgroundColor:'#323232', color:'white'})
 
 **.display(***type***)** = Add the CSS `display` property to an element.
 
+**.rotate(***deg***)** = Add the CSS `transform: rotate()` property to an element.
+
 ### 🎉 Animation
 
 **.fadeIn(***duration***)** = Gradually increases the opacity of an element.
@@ -58,6 +60,8 @@ Avocado.getById('core').style({backgroundColor:'#323232', color:'white'})
 **.rollingNumber(***start, end, duration***)** = I don't know how to explain that but it's cool...
 
 **.typeWriter(***text, speed***)** = Animation that writes a text as it goes.
+
+**.spin(***time***)** = Animation thah make an element spinning.
 
 ### 📥 Input
 
@@ -81,6 +85,8 @@ Avocado.getById('core').style({backgroundColor:'#323232', color:'white'})
 
 **.removeId(***className***)** = Remove ID to an element.
 
+**.copy()** = Copy text of an element to the clipboard.
+
 **.insertHTML(***html***)** = Insert HTML in an element.
 
 **.insertText(***text***)** = Insert text in an element.
@@ -88,6 +94,24 @@ Avocado.getById('core').style({backgroundColor:'#323232', color:'white'})
 **.src(***source***)** = Change source of an element.
 
 **.lenght()** = Return lenght of an element.
+
+### ✒️ Text
+
+**.capitalize(***text***)** = Capitalize your text.
+
+**.lowercase(***text***)** = Lowercase your text.
+
+**.uppercase(***text***)** = Uppercase your text.
+
+**.toCamelCase(***text***)** = Convert text to Camel case.
+
+**.toKebabCase(***text***)** = Convert text to Kebab case.
+
+**.toPascalCase(***text***)** = Convert text to Pascal case.
+
+**.toScreamingSnakeCase(***text***)** = Convert text to Screaming Snake case.
+
+**.toSnakeCase(***text***)** = Convert text to Snake case.
 
 ### 🌆 Window
 
