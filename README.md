@@ -61,13 +61,15 @@ Avocado.getById('core').style({backgroundColor:'#323232', color:'white'})
 
 **.typeWriter(***text, speed***)** = Animation that writes a text as it goes.
 
-**.spin(***time***)** = Animation thah make an element spinning.
+**.spin(***time***)** = Animation that make an element spinning.
 
 ### 📥 Input
 
 **.value()** = Get the value of an input.
 
 **.checked(***bool***)** = Check or uncheck input.
+
+**.showPassword(***bool***)** = Change the visibility of a password field.
 
 ### 🎈 Events
 
@@ -138,3 +140,9 @@ Avocado.getByTag('body').style({background: $$.randomGradient('linear', 54)})
 **.randomFloat(***min, max***)** = Return random float.
 
 **.randomInt(***min, max***)** = Return random integer.
+
+**.passwordGenerator(***length, strength***)** = Generate a random password.
+```js
+// Exemple :
+var password = $$.passwordGenerator(12, normal);
+```
