@@ -2,6 +2,8 @@
 
 A simple and lightweight JavaScript framework to help you create a web application.
 
+### ⚠️ This documentation isn't updated, I'm actually in development of a better documentation.
+
 ## 📌 Features
 
 - Lightweight
@@ -19,13 +21,13 @@ $$.getById('core').typeWriter('Welcome !', 250);
 
 ### 🔗 Selector
 
-**.getById(***id***)** = Get an element by its ID.
+**.ID(***id***)** = Get an element by its ID.
 
-**.getByClass(***class***)** = Get an element by its class name.
+**.CLASS(***class***)** = Get an element by its class name.
 
-**.getByTag(***tag***)** = Get an element by its tag.
+**.TAG(***tag***)** = Get an element by its tag.
 
-**.getByName(***name***)** = Get an element by its name.
+**.NAME(***name***)** = Get an element by its name.
 
 ### ⚙️ Debug
 
